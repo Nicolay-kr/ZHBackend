@@ -1,4 +1,6 @@
 import admin from 'firebase-admin';
+import 'dotenv/config';
+
 
 const firebaseConfig = {
   type: process.env.TYPE,
