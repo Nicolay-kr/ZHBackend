@@ -5,7 +5,7 @@ import dataCollector from '@functions/dataCollector';
 const serverlessConfiguration: AWS = {
   service: 'zhcollector-service',
   frameworkVersion: '3',
-  plugins: ['serverless-esbuild', 'serverless-offline'],
+  plugins: ['serverless-esbuild', 'serverless-offline', 'serverless-dotenv-plugin'],
   provider: {
     name: 'aws',
     runtime: 'nodejs20.x', // Consider updating to a newer Node.js version if available and supported
