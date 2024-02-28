@@ -12,8 +12,8 @@ export default {
     },
     {
       // one hour
-      // schedule: 'cron(0 * * * ? *)'
-      schedule: 'cron(0/1 * * * ? *)',
+      schedule: 'cron(0 * * * ? *)'
+      // schedule: 'cron(0/1 * * * ? *)',
     },
   ],
   timeout: 30,
