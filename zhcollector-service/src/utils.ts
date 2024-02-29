@@ -16,14 +16,17 @@ export function transformData(data: any[]): { parameters: Parameters, airCompone
     'SO2': 0,
   };
 
-  if(!data || data.length<1){
+  if (!data || data.length < 1) {
     return { parameters, airComponents };
   }
 
-  data.forEach(item => {
+  data.forEach((item) => {
     const value = parseFloat(item.Value);
-    switch(item.Name) {
+    switch (item.Name) {
       case 'CO':
+        airComponents.CO = value;
+        break;
+      case 'SO2':
         airComponents.CO = value;
         break;
       case 'NO2':
@@ -49,4 +52,3 @@ export function transformData(data: any[]): { parameters: Parameters, airCompone
 
   return { parameters, airComponents };
 }
-
